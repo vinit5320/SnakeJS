@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Classic Snake by Vinit Jasoliya</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Google fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
+
+    <!-- Snake Modules Import Here-->
+    <script src="Snake/js/Snake.js"></script>
+    <script src="Snake/js/Grid.js"></script>
+    <script src="Snake/js/SnakeBoard.js"></script>
+    <link rel="stylesheet" href="Snake/css/style.css">
+
+    <!-- Local Web Imports -->
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/main.js"></script>
+    <script>
+        document.onreadystatechange = function () {
+            if (document.readyState === "complete") {
+                snakeGame.initialize();
+            }
+        }
+    </script>
+</head>
+<body>
+<div class="wrapper">
+    <div class="content">
+        <div class="sidebar">
+            <h1>Classic Snake</h1>
+            <div class="panel">
+                <h2>Difficulty</h2>
+                <div class="difficulty-options">
+                    <div>
+                        <a class="level-button" onclick="snakeGame.changeGameLevel(1, this);">1</a>
+                    </div>
+                    <div>
+                        <a class="level-button" onclick="snakeGame.changeGameLevel(2, this);">2</a>
+                    </div>
+                    <div>
+                        <a class="level-button" onclick="snakeGame.changeGameLevel(3, this);">3</a>
+                    </div>
+                    <div>
+                        <a class="level-button" onclick="snakeGame.changeGameLevel(4, this);">4</a>
+                    </div>
+                    <div>
+                        <a class="level-button" onclick="snakeGame.changeGameLevel(5, this);">5</a>
+                    </div>
+                </div>
+                <div class="start">
+                    <button id="start-button" onclick="snakeGame.start(this);">Start Game</button>
+                </div>
+            </div>
+            <div class="panel info">
+                <h2>Score:</h2>
+                <p id="score">0</p>
+            </div>
+        </div>
+        <div id="snake-board"></div>
+    </div>
+</div>
+</body>
+</html>
